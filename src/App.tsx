@@ -1,11 +1,13 @@
 import Navbar from "./components/Navbar";
 import Welcome from "./components/Welcome";
+import Dock from "./components/Dock";
 
 export default function App() {
   return (
     <main>
       <Navbar />
       <Welcome />
+      <Dock />
     </main>
   );
 }
