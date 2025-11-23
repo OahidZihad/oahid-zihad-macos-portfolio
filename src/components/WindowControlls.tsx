@@ -6,7 +6,7 @@ export default function WindowControlls({
 }: {
   target: keyof typeof WINDOW_CONFIG;
 }) {
-  const { closeWindow } = useWindowStore();
+  const { closeWindow, toggleMaximize } = useWindowStore();
 
   return (
     <div id="window-controls">
@@ -17,7 +17,7 @@ export default function WindowControlls({
       />
       <div
         className="maximize"
-        onClick={() => console.log("maximize", target)}
+        onClick={() => toggleMaximize(target)}
       />
     </div>
   );
