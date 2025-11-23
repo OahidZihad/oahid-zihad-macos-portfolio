@@ -6,6 +6,8 @@ import gsap from "gsap";
 import Terminal from "./windows/Terminal";
 import Safari from "./windows/Safari";
 import Resume from "./windows/Resume";
+import Finder from "./windows/Finder";
+import TextFile from "./windows/TextFile";
 
 gsap.registerPlugin(Draggable);
 
@@ -18,6 +20,8 @@ export default function App() {
       <Terminal />
       <Safari />
       <Resume />
+      <Finder />
+      <TextFile />
     </main>
   );
 }
