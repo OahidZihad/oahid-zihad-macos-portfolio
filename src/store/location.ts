@@ -11,7 +11,6 @@ type BaseLocation = {
   children?: unknown[];
   position?: string;
   windowPosition?: string;
-  // Add other common properties that exist in your location objects
 };
 
 type Location = BaseLocation;

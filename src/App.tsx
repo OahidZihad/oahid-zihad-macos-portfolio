@@ -9,6 +9,9 @@ import Resume from "./windows/Resume";
 import Finder from "./windows/Finder";
 import TextFile from "./windows/TextFile";
 import ImageFile from "./windows/ImageFile";
+import Contact from "./windows/Contact";
+import Home from "./components/Home";
+import Photos from "./windows/Photos";
 
 gsap.registerPlugin(Draggable);
 
@@ -24,6 +27,9 @@ export default function App() {
       <Finder />
       <TextFile />
       <ImageFile />
+      <Contact />
+      <Home />
+      <Photos />
     </main>
   );
 }
