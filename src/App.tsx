@@ -8,6 +8,7 @@ import Safari from "./windows/Safari";
 import Resume from "./windows/Resume";
 import Finder from "./windows/Finder";
 import TextFile from "./windows/TextFile";
+import ImageFile from "./windows/ImageFile";
 
 gsap.registerPlugin(Draggable);
 
@@ -22,6 +23,7 @@ export default function App() {
       <Resume />
       <Finder />
       <TextFile />
+      <ImageFile />
     </main>
   );
 }
