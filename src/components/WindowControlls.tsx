@@ -11,14 +11,8 @@ export default function WindowControlls({
   return (
     <div id="window-controls">
       <div className="close" onClick={() => closeWindow(target)} />
-      <div
-        className="minimize"
-        onClick={() => console.log("minimize", target)}
-      />
-      <div
-        className="maximize"
-        onClick={() => toggleMaximize(target)}
-      />
+      <div className="minimize" onClick={() => closeWindow(target)} />
+      <div className="maximize" onClick={() => toggleMaximize(target)} />
     </div>
   );
 }

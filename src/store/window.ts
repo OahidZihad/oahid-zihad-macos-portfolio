@@ -31,13 +31,15 @@ const useWindowStore = create<WindowStore>()(
   immer((set) => ({
     windows: (() => {
       const initialWindows = {} as Record<WindowKey, WindowState>;
-      (Object.entries(WINDOW_CONFIG) as [WindowKey, WindowState][]).forEach(([key, value]) => {
-        initialWindows[key] = {
-          ...value,
-          isMaximized: false,
-          position: undefined
-        };
-      });
+      (Object.entries(WINDOW_CONFIG) as [WindowKey, WindowState][]).forEach(
+        ([key, value]) => {
+          initialWindows[key] = {
+            ...value,
+            isMaximized: false,
+            position: undefined,
+          };
+        }
+      );
       return initialWindows;
     })(),
     nextZIndex: INITIAL_Z_INDEX + 1,
@@ -89,10 +91,10 @@ const useWindowStore = create<WindowStore>()(
                   width: win.position.width,
                   height: win.position.height,
                   duration: 0.2,
-                  ease: 'power2.inOut',
+                  ease: "power2.inOut",
                   onComplete: () => {
-                    el.style.borderRadius = '8px';
-                  }
+                    el.style.borderRadius = "8px";
+                  },
                 });
               }
             } else {
@@ -102,23 +104,23 @@ const useWindowStore = create<WindowStore>()(
                 x: rect.left,
                 y: rect.top,
                 width: rect.width,
-                height: rect.height
+                height: rect.height,
               };
-              
+
               // Ensure the window is positioned at top: 0, left: 0 when maximized
-              el.style.top = '0';
-              el.style.left = '0';
-              
+              el.style.top = "0";
+              el.style.left = "0";
+
               gsap.to(el, {
                 x: 0,
                 y: 0,
-                width: '100%',
-                height: '100%',
+                width: "100%",
+                height: "100%",
                 duration: 0.2,
-                ease: 'power2.inOut',
+                ease: "power2.inOut",
                 onStart: () => {
-                  el.style.borderRadius = '0';
-                }
+                  el.style.borderRadius = "0";
+                },
               });
             }
             win.isMaximized = !win.isMaximized;
